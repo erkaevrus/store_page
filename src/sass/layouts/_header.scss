@@ -1,0 +1,16 @@
+.header {
+  padding: 25px 0 0;
+  position: sticky;
+  background: $color-base;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__toggle-switch {
+    margin-bottom: 60px;
+    margin-right: 60px;
+  }
+}

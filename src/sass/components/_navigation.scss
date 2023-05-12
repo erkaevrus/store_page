@@ -1,0 +1,36 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  @include font($size: 2.0rem, $height: 2.3rem, $weight: normal);
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    transition: color 0.8s, text-shadow 0.8s;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 0%;
+      z-index: -1;
+      height: 3px;
+      transition: width 0.8s, opacity 0.8s, box-shadow 0.8s;
+      background: $color-primary;
+      opacity: 0;
+      top: 25px;
+    }
+
+    &:hover:after {
+      width: 100%;
+      opacity: 1;
+    }
+
+    &:hover {
+      text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+    }
+  }
+}

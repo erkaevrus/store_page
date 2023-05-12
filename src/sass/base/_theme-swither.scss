@@ -1,0 +1,54 @@
+:root {
+  --light: #d8dbe0;
+  --dark: #28292c;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 70px;
+}
+
+label {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background-color: var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+input {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+input:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: inset 12px 0px 0px 0px var(--light);
+  background-color: var(--dark);
+  transition: 0.3s;
+}
+
+input:checked ~ .slider::before {
+  transform: translateX(20px);
+  background-color: var(--dark);
+  box-shadow: none;
+}
