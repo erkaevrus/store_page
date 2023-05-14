@@ -431,13 +431,25 @@ body {
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
+  height: 100%;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: normal;
   line-height: 2.1rem;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -548,8 +560,12 @@ input:checked ~ .slider::before {
 
 .header {
   padding: 25px 0 0;
+  height: 100px;
+  width: 100%;
   position: sticky;
+  top: 0;
   background: #F0F0F4;
+  z-index: 5;
 }
 .header__container {
   display: flex;
