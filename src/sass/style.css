@@ -414,6 +414,10 @@ template {
   display: none;
 }
 
+.card {
+  transition: all 0.3s ease-out;
+}
+
 body {
   font-family: "SF Pro Display", sans-serif;
 }
@@ -577,6 +581,11 @@ input:checked ~ .slider::before {
   margin-right: 60px;
 }
 
+.footer {
+  height: 100px;
+  background: #F0F0F4;
+}
+
 .navigation {
   display: flex;
   justify-content: start;
@@ -681,9 +690,18 @@ input:checked ~ .slider::before {
   top: 15px;
   right: 19px;
 }
+.card:hover {
+  box-shadow: 3px 3px 20px 0px rgba(50, 50, 50, 0.25);
+}
+.card:hover .card__title {
+  color: #1C62CD;
+}
+.card:hover .card__price {
+  color: #1C62CD;
+}
 
 .categories-list {
-  padding: 40px 0 20px;
+  padding: 40px 0 70px;
 }
 .categories-list__container {
   display: flex;
@@ -693,7 +711,7 @@ input:checked ~ .slider::before {
 .categories-list__link {
   padding: 5px 20px;
   background: #F0F0F4;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

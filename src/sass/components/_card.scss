@@ -9,6 +9,7 @@
   border-radius: 3px;
   padding: 10px;
   position: relative;
+  @extend %transition;
 
   &__date {
     color: $color-primary;
@@ -56,5 +57,17 @@
     position: absolute;
     top: 15px;
     right: 19px;
+  }
+
+  &:hover {
+    box-shadow: 3px 3px 20px 0px rgba(50, 50, 50, 0.25);
+
+    & .card__title {
+      color: $color-primary;
+    }
+
+    & .card__price {
+      color: $color-primary;
+    }
   }
 }
