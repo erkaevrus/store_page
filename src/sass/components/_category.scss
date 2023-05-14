@@ -1,0 +1,13 @@
+.category {
+  padding: 40px 0;
+
+  &__header {
+    padding-bottom: 50px;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 50px;
+  }
+}

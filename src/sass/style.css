@@ -418,6 +418,10 @@ body {
   font-family: "SF Pro Display", sans-serif;
 }
 
+.card__price {
+  font-family: "Barlow", sans-serif;
+}
+
 *,
 *:after,
 *:before {
@@ -446,9 +450,24 @@ h2,
 h3,
 h4,
 h5,
+ul,
 p {
   padding: 0;
   margin: 0;
+}
+
+h2 {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.6rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
 }
 
 :root {
@@ -459,6 +478,7 @@ p {
 .toggle-switch {
   position: relative;
   width: 70px;
+  height: 100%;
 }
 
 label {
@@ -506,6 +526,20 @@ input:checked ~ .slider::before {
   box-shadow: none;
 }
 
+.ico {
+  display: block;
+}
+.ico--buy {
+  background: url("../../src/img/icons/icon-buy.svg");
+  width: 30px;
+  height: 23px;
+}
+.ico--like {
+  background: url("../../src/img/icons/icon-like.svg");
+  width: 24px;
+  height: 22px;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -529,7 +563,7 @@ input:checked ~ .slider::before {
 
 .navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   column-gap: 30px;
   font-size: 2rem;
@@ -561,6 +595,75 @@ input:checked ~ .slider::before {
 }
 .navigation__item:hover {
   text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
+}
+
+.category {
+  padding: 40px 0;
+}
+.category__header {
+  padding-bottom: 50px;
+}
+.category__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  max-width: 270px;
+  border: solid 1px #CDCDCD;
+  border-radius: 3px;
+  padding: 10px;
+  position: relative;
+}
+.card__date {
+  color: #1C62CD;
+  padding-top: 10px;
+  padding-left: 10px;
+  align-self: flex-start;
+  max-width: 200px;
+}
+.card__img {
+  display: block;
+  width: 250px;
+  height: 190px;
+  margin: 52px 10px 24px;
+}
+.card__title {
+  text-align: center;
+  padding-bottom: 25px;
+}
+.card__price {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.6rem;
+  padding-bottom: 31px;
+}
+.card__btn-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 40px;
+  background: #1C62CD;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px 0 0 0;
+}
+.card__btn-like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 19px;
 }
 
 /*# sourceMappingURL=style.css.map */

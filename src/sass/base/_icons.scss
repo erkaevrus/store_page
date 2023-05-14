@@ -1,0 +1,15 @@
+.ico {
+  display: block;
+
+  &--buy {
+    background: url("../../src/img/icons/icon-buy.svg");
+    width: 30px;
+    height: 23px;
+  }
+
+  &--like {
+    background: url("../../src/img/icons/icon-like.svg");
+    width: 24px;
+    height: 22px;
+  }
+}

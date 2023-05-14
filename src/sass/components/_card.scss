@@ -1,0 +1,61 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  max-width: 270px;
+  border: solid 1px #CDCDCD;
+  border-radius: 3px;
+  padding: 10px;
+  position: relative;
+
+  &__date {
+    color: $color-primary;
+    padding-top: 10px;
+    padding-left: 10px;
+    align-self: flex-start;
+    max-width: 200px;
+  }
+
+
+  &__img {
+    display: block;
+    width: 250px;
+    height: 190px;
+    margin: 52px 10px 24px;
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  &__price {
+    @extend %font-add;
+    @include font($size: 3.0rem, $height: 3.6rem, $weight: 700);
+    padding-bottom: 31px;
+  }
+
+  &__btn-buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    background: $color-primary;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px 0 0 0;
+  }
+
+  &__btn-like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    right: 19px;
+  }
+}

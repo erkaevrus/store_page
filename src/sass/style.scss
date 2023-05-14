@@ -8,6 +8,8 @@
 // ---BASE---
 @import "base/base";
 @import "base/_theme-swither";
+@import "base/_icons";
+
 
 
 // ---LAYOUTS---
@@ -18,3 +20,5 @@
 
 // ---COMPONENTS---
 @import "components/navigation";
+@import "components/category";
+@import "components/card";
