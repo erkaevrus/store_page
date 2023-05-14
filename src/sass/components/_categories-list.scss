@@ -1,0 +1,15 @@
+.categories-list {
+  padding: 40px 0  20px;
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 20px;
+  }
+
+  &__link {
+    padding: 5px 20px;
+    background: $color-base;
+    border-radius: 3px;
+  }
+}

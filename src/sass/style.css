@@ -682,4 +682,18 @@ input:checked ~ .slider::before {
   right: 19px;
 }
 
+.categories-list {
+  padding: 40px 0 20px;
+}
+.categories-list__container {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 20px;
+}
+.categories-list__link {
+  padding: 5px 20px;
+  background: #F0F0F4;
+  border-radius: 3px;
+}
+
 /*# sourceMappingURL=style.css.map */
