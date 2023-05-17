@@ -464,6 +464,10 @@ body {
   background: #2F3035;
 }
 
+[dark] .category .category__container .category__content > .card > .card__date {
+  color: #C4C4C4;
+}
+
 .main {
   flex-grow: 1;
 }
@@ -729,6 +733,7 @@ input:checked ~ .slider::before {
   display: flex;
   justify-content: flex-start;
   column-gap: 20px;
+  list-style: none;
 }
 .categories-list__item {
   background: #F0F0F4;

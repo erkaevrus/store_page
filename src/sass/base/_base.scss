@@ -35,6 +35,9 @@ body {
   background: $color-text;
 }
 
+[dark] .category .category__container .category__content >.card >.card__date {
+  color: $color-text-add;
+}
 
 .main {
   flex-grow: 1;
