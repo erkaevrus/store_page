@@ -1,15 +1,16 @@
 .categories-list {
   padding: 40px 0  70px;
 
+
   &__container {
     display: flex;
     justify-content: flex-start;
     column-gap: 20px;
   }
 
-  &__link {
-    padding: 5px 20px;
+  &__item {
     background: $color-base;
+    padding: 5px 20px;
     border-radius: 5px;
   }
 }

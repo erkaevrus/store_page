@@ -444,6 +444,24 @@ body {
   font-style: normal;
   font-weight: normal;
   line-height: 2.1rem;
+  background: #FFFFFF;
+}
+
+[dark] {
+  background: #28292c;
+  color: #FFFFFF;
+}
+
+[dark] .header {
+  background: #2F3035;
+}
+
+[dark] .footer {
+  background: #2F3035;
+}
+
+[dark] .categories-list__container > .categories-list__item {
+  background: #2F3035;
 }
 
 .main {
@@ -486,11 +504,6 @@ h3 {
   line-height: 2.2rem;
 }
 
-:root {
-  --light: #d8dbe0;
-  --dark: #28292c;
-}
-
 .toggle-switch {
   position: relative;
   width: 70px;
@@ -501,7 +514,7 @@ label {
   position: absolute;
   width: 100%;
   height: 40px;
-  background-color: var(--dark);
+  background-color: #28292c;
   border-radius: 25px;
   cursor: pointer;
 }
@@ -520,7 +533,7 @@ input {
 }
 
 input:checked ~ .slider {
-  background-color: var(--light);
+  background-color: #F0F0F4;
 }
 
 .slider::before {
@@ -531,14 +544,14 @@ input:checked ~ .slider {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  box-shadow: inset 12px 0px 0px 0px var(--light);
-  background-color: var(--dark);
+  box-shadow: inset 12px 0px 0px 0px #F0F0F4;
+  background-color: #28292c;
   transition: 0.3s;
 }
 
 input:checked ~ .slider::before {
   transform: translateX(20px);
-  background-color: var(--dark);
+  background-color: #28292c;
   box-shadow: none;
 }
 
@@ -717,9 +730,9 @@ input:checked ~ .slider::before {
   justify-content: flex-start;
   column-gap: 20px;
 }
-.categories-list__link {
-  padding: 5px 20px;
+.categories-list__item {
   background: #F0F0F4;
+  padding: 5px 20px;
   border-radius: 5px;
 }
 

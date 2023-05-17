@@ -14,8 +14,27 @@ body {
   height: 100%;
   @extend %font-primary;
   @include font($size: 1.8rem, $height: 2.1rem, $weight: normal);
-  // background:  #28292c;
+  background: $color-light;
 }
+
+[dark] {
+  background:  #28292c;
+  color: $color-light;
+}
+
+[dark] .header {
+  background: $color-text;
+}
+
+
+[dark] .footer {
+  background: $color-text;
+}
+
+[dark] .categories-list__container >.categories-list__item{
+  background: $color-text;
+}
+
 
 .main {
   flex-grow: 1;
