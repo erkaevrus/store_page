@@ -555,6 +555,15 @@ input:checked ~ .slider::before {
   width: 24px;
   height: 22px;
 }
+.ico--arrow-up {
+  background: url("../../src/img/icons/icon-arrow-up.svg");
+  rotate: -90deg;
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 .container {
   width: 1200px;
@@ -712,6 +721,27 @@ input:checked ~ .slider::before {
   padding: 5px 20px;
   background: #F0F0F4;
   border-radius: 5px;
+}
+
+.button-up {
+  position: fixed;
+  background-color: #1C62CD;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(0);
+  opacity: 1;
+}
+.button-up--hide {
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+.button-up {
+  position: fixed;
+  background-color: $color-primary;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(0);
+  opacity: 1;
+
+  &--hide {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
