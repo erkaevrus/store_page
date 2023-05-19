@@ -10,11 +10,15 @@ html {
   height: 100%;
 }
 
-body {
+.body {
   height: 100%;
   @extend %font-primary;
   @include font($size: 1.8rem, $height: 2.1rem, $weight: normal);
   background: $color-light;
+  position: relative;
+  &--lock {
+    overflow: hidden;
+  }
 }
 
 [dark] {
@@ -66,7 +70,7 @@ p {
 }
 
 h1 {
-
+  display: none;
 }
 
 h2 {
@@ -75,4 +79,21 @@ h2 {
 
 h3 {
   @include font($size: 1.8rem, $height: 2.2rem, $weight: 400);
+}
+
+.overlay {
+  display: none;
+  @extend %transition;
+  z-index: 6;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000%;
+  background: rgba(41, 41, 41, 0.7);
+  &--active {
+    display: block;
+    position: absolute;
+    opacity: 1;
+  }
 }

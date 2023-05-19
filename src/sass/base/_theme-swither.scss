@@ -4,7 +4,7 @@
   height: 100%;
 }
 
-label {
+.toggle-switch label {
   position: absolute;
   width: 100%;
   height: 40px;
@@ -13,7 +13,7 @@ label {
   cursor: pointer;
 }
 
-input {
+.toggle-switch input {
   position: absolute;
   display: none;
 }

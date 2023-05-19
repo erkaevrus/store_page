@@ -7,9 +7,10 @@
 
 // ---BASE---
 @import "base/base";
-@import "base/_theme-swither";
-@import "base/_icons";
-
+@import "base/theme-swither";
+@import "base/icons";
+@import "base/custom-radios";
+@import "base/custom-counter";
 
 
 // ---LAYOUTS---
@@ -24,3 +25,4 @@
 @import "components/card";
 @import "components/categories-list";
 @import "components/button-up";
+@import "components/form";

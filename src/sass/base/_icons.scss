@@ -1,5 +1,7 @@
+
 .ico {
   display: block;
+  cursor: pointer;
 
   &--buy {
     background: url("../../src/img/icons/icon-buy.svg");
@@ -18,8 +20,27 @@
     rotate: -90deg;
     width: 35px;
     height: 35px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    @include img-container;
+  }
+
+  &--minus {
+    background: url("../../src/img/icons/icon-minus.svg");
+    width: 27px;
+    height: 15px;
+    @include img-container;
+  }
+
+  &--plus {
+    background: url("../../src/img/icons/icon-plus.svg");
+    width: 27px;
+    height: 27px;
+    @include img-container;
+  }
+
+  &--cross {
+    background: url("../../src/img/icons/icon-cross.svg");
+    width: 35px;
+    height: 35px;
+    @include img-container;
   }
 }

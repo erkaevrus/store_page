@@ -4,3 +4,9 @@
   font-weight: $weight;
   line-height: $height;
 }
+
+@mixin img-container {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

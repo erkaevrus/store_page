@@ -1,0 +1,18 @@
+.custom-counter {
+  display: flex;
+
+  input {
+    text-align: center;
+    height: inherit;
+    width: 15%;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+
+  button {
+    background: inherit;
+    border: none;
+  }
+}
