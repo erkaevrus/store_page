@@ -10,7 +10,6 @@ export function initCounter() {
     inputValue.value = value
   })
 
-
   decrementBtn.addEventListener('click', function() {
     let value = Number(inputValue.value)
     if (value < 2) return

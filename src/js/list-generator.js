@@ -1,4 +1,4 @@
-const categories = document.querySelectorAll('.category__title')
+const categories = document.querySelectorAll('.category')
 const categoriesContainer = document.querySelector('.categories-list__container')
 
 //Функция Фишера-Йейтса для тассовки массива
@@ -20,7 +20,8 @@ categoriesArray.forEach(category => {
   item.classList.add('categories-list__item')
   link.classList.add('categories-list__link')
 
-  link.textContent = category.textContent
+  link.setAttribute('href', `#${category.id}`)
+  link.textContent = category.childNodes[1].childNodes[1].childNodes[1].textContent
   item.appendChild(link)
   categoriesContainer.appendChild(item)
 })

@@ -851,6 +851,7 @@ input:checked ~ .slider::before {
   background: #F0F0F4;
   padding: 5px 20px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .button-up {
