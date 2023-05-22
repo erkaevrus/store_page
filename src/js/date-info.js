@@ -3,11 +3,11 @@ const MONTHS = ['Января', 'Февраля', 'Марта', 'Апреля', 
 const cardDate = document.querySelectorAll('.card__date')
 
 function setDayInfo() {
-  cardDate.forEach(card => {
-    let date = new Date(card.dataset.date)
-    let message = `${DAYS[date.getDay()]}, ${Math.ceil(date.getDate() / 7)} неделя ${MONTHS[date.getMonth()]} ${date.getFullYear()} года`
+  cardDate.forEach((card) => {
+    const date = new Date(card.dataset.date)
+    const message = `${DAYS[date.getDay()]}, ${Math.ceil(date.getDate() / 7)} неделя ${MONTHS[date.getMonth()]} ${date.getFullYear()} года`
     card.textContent = message
   })
 }
 
-document.addEventListener("DOMContentLoaded", setDayInfo)
+document.addEventListener('DOMContentLoaded', setDayInfo)

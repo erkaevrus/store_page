@@ -1,8 +1,7 @@
-import { initCounter } from "./input-counter.js"
-
+import { initCounter } from './input-counter'
 
 function drawPopup() {
-  let modalWindow = document.createElement('div')
+  const modalWindow = document.createElement('div')
   modalWindow.classList.add('form-wrapper')
   modalWindow.innerHTML =
       `
@@ -69,50 +68,11 @@ function drawPopup() {
   document.querySelector('.wrapper').appendChild(modalWindow)
 }
 
-
-function displayPopup() {
-  drawPopup()
-  initCounter()
-  doPurchase()
-
-  setTimeout(function() {
-    document.querySelector('.form-wrapper').classList.add('form-wrapper--active')
-  }, 200)
-
-  document.querySelector('.overlay').classList.add('overlay--active')
-  document.body.classList.add('body--lock')
-}
-
-
 function closePopup() {
   document.querySelector('.form-wrapper').remove()
   document.body.classList.remove('body--lock')
   document.querySelector('.overlay').classList.remove('overlay--active')
 }
-
-
-document.addEventListener('click', function(event) {
-  if(event.target.classList.contains('ico--cross')) {
-      closePopup()
-      return
-  }
-
-  if(event.target.parentElement.classList.contains('form-wrapper')) {
-      return
-  }
-
-  if(event.target.classList.contains('form-wrapper')) {
-      closePopup()
-  }
-})
-
-
-const btnBuy = document.querySelectorAll('.card__btn-buy')
-
-btnBuy.forEach(btn => {
-  btn.addEventListener('click', displayPopup)
-})
-
 
 function doPurchase() {
   const btnPurchase = document.querySelector('.button')
@@ -121,3 +81,35 @@ function doPurchase() {
     alert('Спасибо за покупку. В ближайшее время с вами свяжется наш менеджер.')
   })
 }
+
+function displayPopup() {
+  drawPopup()
+  initCounter()
+  doPurchase()
+
+  setTimeout(() => {
+    document.querySelector('.form-wrapper').classList.add('form-wrapper--active')
+  }, 200)
+
+  document.querySelector('.overlay').classList.add('overlay--active')
+  document.body.classList.add('body--lock')
+}
+
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('ico--cross')) {
+    closePopup()
+    return
+  }
+  if (event.target.parentElement.classList.contains('form-wrapper')) {
+    return
+  }
+  if (event.target.classList.contains('form-wrapper')) {
+    closePopup()
+  }
+})
+
+const btnBuy = document.querySelectorAll('.card__btn-buy')
+
+btnBuy.forEach((btn) => {
+  btn.addEventListener('click', displayPopup)
+})

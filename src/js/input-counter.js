@@ -3,17 +3,17 @@ export function initCounter() {
   const incrementBtn = document.querySelector('.increment')
   const inputValue = document.querySelector('.custom-input-number')
 
-  incrementBtn.addEventListener('click', function() {
+  incrementBtn.addEventListener('click', () => {
     let value = Number(inputValue.value)
     if (value > 9) return
-    value++
+    value += 1
     inputValue.value = value
   })
 
-  decrementBtn.addEventListener('click', function() {
+  decrementBtn.addEventListener('click', () => {
     let value = Number(inputValue.value)
     if (value < 2) return
-    value--
+    value -= 1
     inputValue.value = value
   })
 }
