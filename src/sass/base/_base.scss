@@ -1,0 +1,100 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  // height: 100%;
+}
+
+.body {
+  // height: 100%;
+  @extend %font-primary;
+  @include font($size: 1.8rem, $height: 2.1rem, $weight: normal);
+  background: $color-light;
+  position: relative;
+  &--lock {
+    overflow: hidden;
+  }
+}
+
+[dark] {
+  background:  #28292c;
+  color: $color-light;
+}
+
+[dark] .header {
+  background: $color-text;
+}
+
+
+[dark] .footer {
+  background: $color-text;
+}
+
+[dark] .categories-list__container >.categories-list__item{
+  background: $color-text;
+}
+
+[dark] .category .category__container .category__content >.card >.card__date {
+  color: $color-text-add;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  @include font($size: 3.0rem, $height: 3.6rem, $weight: 700);
+}
+
+h3 {
+  @include font($size: 1.8rem, $height: 2.2rem, $weight: 400);
+}
+
+.overlay {
+  display: none;
+  transition: all .5s ease-in-out;
+  @extend %transition;
+  z-index: 1;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000%;
+  background: rgba(41, 41, 41, 0.7);
+  &--active {
+    display: block;
+    position: absolute;
+    opacity: 1;
+  }
+}

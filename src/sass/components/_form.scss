@@ -1,0 +1,72 @@
+.form-wrapper {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: 0.2s ease-out;
+  opacity: 0;
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+.form {
+  color: $color-text;
+  background: $color-light;
+  @include font($size: 2.0rem, $height: 2.4rem, $weight: 600);
+  padding: 20px;
+  max-width: 600px;
+  max-height: 700px;
+  flex-grow: 1;
+  margin: 0 20px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 25px;
+
+  &__btn-close {
+    align-self: flex-end;
+  }
+
+  &__color {
+    display: flex;
+    justify-content: start;
+    max-width: 400px;
+    column-gap: 90px;
+  }
+
+  &__counter {
+    display: flex;
+    justify-content: start;
+    column-gap: 20px;
+  }
+
+  &__comment {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  &__textarea {
+    display: block;
+    resize: none;
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.button {
+  width: 200px;
+  height: 60px;
+  background: $color-primary;
+  color: $color-light;
+  align-self: center;
+  cursor: pointer;
+}

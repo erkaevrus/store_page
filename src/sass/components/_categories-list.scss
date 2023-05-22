@@ -1,0 +1,23 @@
+.categories-list {
+  padding: 40px 0  70px;
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 20px;
+    list-style: none;
+
+    @media (max-width: 670px) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  &__item {
+    background: $color-base;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 140px;
+  }
+}

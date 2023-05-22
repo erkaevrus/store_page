@@ -1,0 +1,29 @@
+@import "../../node_modules/normalize-scss/sass/normalize";
+@include normalize();
+@import "abstract/constants";
+@import "abstract/mixins";
+@import "abstract/placeholders";
+
+
+// ---BASE---
+@import "base/base";
+@import "base/theme-swither";
+@import "base/icons";
+@import "base/custom-radios";
+@import "base/custom-counter";
+
+
+// ---LAYOUTS---
+@import "layouts/container";
+@import "layouts/header";
+@import "layouts/footer";
+
+
+// ---COMPONENTS---
+@import "components/navigation";
+@import "components/category";
+@import "components/card";
+@import "components/categories-list";
+@import "components/button-up";
+@import "components/form";
+@import "components/hamburger";
