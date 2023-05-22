@@ -117,6 +117,7 @@ btnBuy.forEach(btn => {
 function doPurchase() {
   const btnPurchase = document.querySelector('.button')
   btnPurchase.addEventListener('click', () => {
+    closePopup()
     alert('Спасибо за покупку. В ближайшее время с вами свяжется наш менеджер.')
   })
 }
