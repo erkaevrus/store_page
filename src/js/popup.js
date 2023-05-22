@@ -1,4 +1,4 @@
-import { initCounter } from './input-counter'
+import { initCounter } from './input-counter.js'
 
 function drawPopup() {
   const modalWindow = document.createElement('div')
